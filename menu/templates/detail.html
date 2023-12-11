@@ -1,0 +1,29 @@
+{% load tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Document Information</title>
+</head>
+<body>
+
+    {% draw_menu 'menu1' %}
+    {% draw_menu 'menu2.1' %}
+    {% draw_menu 'Menu3' %}
+
+
+
+    <h1>Document Information</h1>
+
+    <div>
+        <p><strong>Name:</strong> {{ object.name }} </p>
+        <p><strong>Parent name:</strong> {{ object.parent.name }} </p>
+    </div>
+
+<script src="{% static 'menu.js' %}"></script>
+
+</body>
+</html>

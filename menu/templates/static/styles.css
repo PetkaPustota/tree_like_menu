@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стили для основных пунктов меню */
+li {
+    margin: 5px 0;
+}
+
+/* Стили для стрелок в основных пунктах меню */
+.caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Стили для вложенных подменю */
+.nested {
+    display: none;
+    padding-left: 20px;
+}
+
+/* Стили для активных подменю */
+.active {
+    display: block;
+}
+
+/* Стили для ссылок в подменю */
+li ul li a {
+    text-decoration: none;
+    color: #333; /* Цвет текста ссылок */
+}
+
+li ul li a:hover {
+    color: #555; /* Цвет текста при наведении на ссылку */
+}

@@ -1,0 +1,14 @@
+<ul id="menu">
+    {% load tags %}
+    {% for item in menu_items %}
+        {% if item.children|length > 0 %}
+            <li><span class="caret" onclick="toggleMenu(this)">{{ item.node.name }}</span>
+                <ul class="nested">
+                    {% draw_menu menu_items=item.children filter=name %}
+                </ul>
+            </li>
+        {% else %}
+            <li><a href="{% url 'detail' item.node.id %}">{{ item.node.name }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
